@@ -11,9 +11,8 @@ public class HomePageTests extends TestHelper {
 
     Browser browser;
 
-    @Parameters({"browserName", "baseUrl"})
     @BeforeClass(groups = {"web"})
-    public void setUp(String browserName, String baseUrl) {
+    public void setUp(@Optional("chrome") @Parameters({"browserName"}) String browserName, @Optional("http://www.bbc.co.uk/") @Parameters({"baseUrl"}) String baseUrl) {
         browser = new Browser(browserName, baseUrl);
         browser.navigateToBaseUrl();
     }
@@ -29,5 +28,4 @@ public class HomePageTests extends TestHelper {
     public void tearDown() {
         browser._driver.quit();
     }
-
 }
