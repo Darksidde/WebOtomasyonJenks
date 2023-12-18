@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="none">
-
     <parameter name="baseUrl" value="http://www.bbc.co.uk/"/>
 
     <test name="Chrome Tests">
@@ -11,7 +9,6 @@
                 <include name="web"/>
             </run>
         </groups>
-
         <classes>
             <class name="tests.HomePageTests" />
         </classes>
@@ -24,9 +21,8 @@
                 <include name="web"/>
             </run>
         </groups>
-
         <classes>
-            <!--<class name="tests.HomePageTests" />-->
+            <class name="tests.HomePageTests" />
         </classes>
     </test>
 
@@ -37,11 +33,10 @@
                 <include name="web"/>
             </run>
         </groups>
-
         <classes>
-            <!--<class name="tests.HomePageTests" />-->
+            <class name="tests.HomePageTests" />
         </classes>
-    </test> <!-- Test -->
+    </test>
 
     <test name="IE Tests">
         <parameter name="browserName" value="InternetExplorer"/>
@@ -50,8 +45,8 @@
                 <include name="web"/>
             </run>
         </groups>
-
         <classes>
+            <class name="tests.HomePageTests" />
         </classes>
     </test>
 
@@ -62,11 +57,8 @@
                 <include name="web"/>
             </run>
         </groups>
-
         <classes>
-            <!--<class name="tests.HomePageTests" />-->
+            <class name="tests.HomePageTests" />
         </classes>
     </test>
-
-
-</suite> <!-- Suite -->
+</suite>
